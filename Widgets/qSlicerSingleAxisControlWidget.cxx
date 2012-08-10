@@ -13,60 +13,57 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  This file was originally developed by Jean-Christophe Fillion-Robin, Kitware Inc.
-  and was partially funded by NIH grant 3P41RR013218-12S1
-
 ==============================================================================*/
 
-// FooBar Widgets includes
-#include "qSlicerFooBarWidget.h"
-#include "ui_qSlicerFooBarWidget.h"
+// SingleAxisControl Widgets includes
+#include "qSlicerSingleAxisControlWidget.h"
+#include "ui_qSlicerSingleAxisControlWidget.h"
 
 //-----------------------------------------------------------------------------
 /// \ingroup Slicer_QtModules_NeedlePusher
-class qSlicerFooBarWidgetPrivate
-  : public Ui_qSlicerFooBarWidget
+class qSlicerSingleAxisControlWidgetPrivate
+  : public Ui_qSlicerSingleAxisControlWidget
 {
-  Q_DECLARE_PUBLIC(qSlicerFooBarWidget);
+  Q_DECLARE_PUBLIC(qSlicerSingleAxisControlWidget);
 protected:
-  qSlicerFooBarWidget* const q_ptr;
+  qSlicerSingleAxisControlWidget* const q_ptr;
 
 public:
-  qSlicerFooBarWidgetPrivate(
-    qSlicerFooBarWidget& object);
-  virtual void setupUi(qSlicerFooBarWidget*);
+  qSlicerSingleAxisControlWidgetPrivate(
+    qSlicerSingleAxisControlWidget& object);
+  virtual void setupUi(qSlicerSingleAxisControlWidget*);
 };
 
 // --------------------------------------------------------------------------
-qSlicerFooBarWidgetPrivate
-::qSlicerFooBarWidgetPrivate(
-  qSlicerFooBarWidget& object)
+qSlicerSingleAxisControlWidgetPrivate
+::qSlicerSingleAxisControlWidgetPrivate(
+  qSlicerSingleAxisControlWidget& object)
   : q_ptr(&object)
 {
 }
 
 // --------------------------------------------------------------------------
-void qSlicerFooBarWidgetPrivate
-::setupUi(qSlicerFooBarWidget* widget)
+void qSlicerSingleAxisControlWidgetPrivate
+::setupUi(qSlicerSingleAxisControlWidget* widget)
 {
-  this->Ui_qSlicerFooBarWidget::setupUi(widget);
+  this->Ui_qSlicerSingleAxisControlWidget::setupUi(widget);
 }
 
 //-----------------------------------------------------------------------------
-// qSlicerFooBarWidget methods
+// qSlicerSingleAxisControlWidget methods
 
 //-----------------------------------------------------------------------------
-qSlicerFooBarWidget
-::qSlicerFooBarWidget(QWidget* parentWidget)
+qSlicerSingleAxisControlWidget
+::qSlicerSingleAxisControlWidget(QWidget* parentWidget)
   : Superclass( parentWidget )
-  , d_ptr( new qSlicerFooBarWidgetPrivate(*this) )
+  , d_ptr( new qSlicerSingleAxisControlWidgetPrivate(*this) )
 {
-  Q_D(qSlicerFooBarWidget);
+  Q_D(qSlicerSingleAxisControlWidget);
   d->setupUi(this);
 }
 
 //-----------------------------------------------------------------------------
-qSlicerFooBarWidget
-::~qSlicerFooBarWidget()
+qSlicerSingleAxisControlWidget
+::~qSlicerSingleAxisControlWidget()
 {
 }

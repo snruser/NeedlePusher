@@ -13,40 +13,37 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  This file was originally developed by Jean-Christophe Fillion-Robin, Kitware Inc.
-  and was partially funded by NIH grant 3P41RR013218-12S1
-
 ==============================================================================*/
 
-#ifndef __qSlicerFooBarWidget_h
-#define __qSlicerFooBarWidget_h
+#ifndef __qSlicerSingleAxisControlWidget_h
+#define __qSlicerSingleAxisControlWidget_h
 
 // Qt includes
 #include <QWidget>
 
-// FooBar Widgets includes
+// SingleAxisControl Widgets includes
 #include "qSlicerNeedlePusherModuleWidgetsExport.h"
 
-class qSlicerFooBarWidgetPrivate;
+class qSlicerSingleAxisControlWidgetPrivate;
 
 /// \ingroup Slicer_QtModules_NeedlePusher
-class Q_SLICER_MODULE_NEEDLEPUSHER_WIDGETS_EXPORT qSlicerFooBarWidget
+class Q_SLICER_MODULE_NEEDLEPUSHER_WIDGETS_EXPORT qSlicerSingleAxisControlWidget
   : public QWidget
 {
   Q_OBJECT
 public:
   typedef QWidget Superclass;
-  qSlicerFooBarWidget(QWidget *parent=0);
-  virtual ~qSlicerFooBarWidget();
+  qSlicerSingleAxisControlWidget(QWidget *parent=0);
+  virtual ~qSlicerSingleAxisControlWidget();
 
 protected slots:
 
 protected:
-  QScopedPointer<qSlicerFooBarWidgetPrivate> d_ptr;
+  QScopedPointer<qSlicerSingleAxisControlWidgetPrivate> d_ptr;
 
 private:
-  Q_DECLARE_PRIVATE(qSlicerFooBarWidget);
-  Q_DISABLE_COPY(qSlicerFooBarWidget);
+  Q_DECLARE_PRIVATE(qSlicerSingleAxisControlWidget);
+  Q_DISABLE_COPY(qSlicerSingleAxisControlWidget);
 };
 
 #endif

@@ -75,7 +75,7 @@ QString qSlicerNeedlePusherModule::acknowledgementText()const
 QStringList qSlicerNeedlePusherModule::contributors()const
 {
   QStringList moduleContributors;
-  moduleContributors << QString("Jean-Christophe Fillion-Robin (Kitware)");
+  moduleContributors << QString("Laurent Chauvin (SNR)");
   return moduleContributors;
 }
 
@@ -88,7 +88,7 @@ QIcon qSlicerNeedlePusherModule::icon()const
 //-----------------------------------------------------------------------------
 QStringList qSlicerNeedlePusherModule::categories() const
 {
-  return QStringList() << "Examples";
+  return QStringList() << "IGT";
 }
 
 //-----------------------------------------------------------------------------

@@ -8,20 +8,20 @@ set(${KIT}_INCLUDE_DIRECTORIES
   )
 
 set(${KIT}_SRCS
-  qSlicerFooBarWidget.cxx
-  qSlicerFooBarWidget.h
+  qSlicerSingleAxisControlWidget.cxx
+  qSlicerSingleAxisControlWidget.h
   )
 
 set(${KIT}_MOC_SRCS
-  qSlicerFooBarWidget.h
+  qSlicerSingleAxisControlWidget.h
   )
 
 set(${KIT}_UI_SRCS
-  ../Resources/UI/qSlicerFooBarWidget.ui
+  ../Resources/UI/qSlicerSingleAxisControlWidget.ui
   )
 
 set(${KIT}_RESOURCES
-  ../Resources/UI/qSlicerFooBarWidget.ui
+  ../Resources/UI/qSlicerSingleAxisControlWidget.ui
   )
 
 set(${KIT}_TARGET_LIBRARIES
