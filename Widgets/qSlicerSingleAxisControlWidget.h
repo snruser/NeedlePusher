@@ -34,12 +34,17 @@ class Q_SLICER_MODULE_NEEDLEPUSHER_WIDGETS_EXPORT qSlicerSingleAxisControlWidget
 public:
   typedef QWidget Superclass;
   qSlicerSingleAxisControlWidget(QWidget *parent=0);
+  qSlicerSingleAxisControlWidget(const char* title, QWidget *parent=0);
   virtual ~qSlicerSingleAxisControlWidget();
+  
+  void setTitle(const char* newTitle);
 
 protected slots:
+  void testSlot(bool bTest);
 
 protected:
   QScopedPointer<qSlicerSingleAxisControlWidgetPrivate> d_ptr;
+  void init();
 
 private:
   Q_DECLARE_PRIVATE(qSlicerSingleAxisControlWidget);

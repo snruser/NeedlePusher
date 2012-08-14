@@ -38,13 +38,18 @@ public:
   qSlicerNeedlePusherModuleWidget(QWidget *parent=0);
   virtual ~qSlicerNeedlePusherModuleWidget();
 
+  int previousDOF;
+
 public slots:
+  void onDOFChanged(int dof);
 
 
 protected:
   QScopedPointer<qSlicerNeedlePusherModuleWidgetPrivate> d_ptr;
   
   virtual void setup();
+  void AddAxisWidgets(int axisToAdd);
+  void RemoveAxisWidgets(int axisToRemove);
 
 private:
   Q_DECLARE_PRIVATE(qSlicerNeedlePusherModuleWidget);
