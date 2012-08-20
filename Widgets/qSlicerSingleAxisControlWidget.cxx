@@ -60,7 +60,7 @@ qSlicerSingleAxisControlWidget
   : Superclass( parentWidget )
   , d_ptr( new qSlicerSingleAxisControlWidgetPrivate(*this) )
 {
-  init();
+  this->InitSetup();
 }
 
 //-----------------------------------------------------------------------------
@@ -69,19 +69,16 @@ qSlicerSingleAxisControlWidget
   : Superclass( parentWidget )
   , d_ptr( new qSlicerSingleAxisControlWidgetPrivate(*this) )
 {
-  init();
+  this->InitSetup();
   this->setTitle(title);
 }
 
 //-----------------------------------------------------------------------------
-void qSlicerSingleAxisControlWidget::init()
+void qSlicerSingleAxisControlWidget::InitSetup()
 {
   Q_D(qSlicerSingleAxisControlWidget);
 
   d->setupUi(this);
-
-  connect(d->AxisGroupBox, SIGNAL(clicked(bool)),
-	  this, SLOT(testSlot(bool)));
 }
 
 
@@ -97,10 +94,4 @@ void qSlicerSingleAxisControlWidget::setTitle(const char* newTitle)
   Q_D(qSlicerSingleAxisControlWidget);
   
   d->AxisGroupBox->setTitle(newTitle);
-}
-
-//-----------------------------------------------------------------------------
-void qSlicerSingleAxisControlWidget::testSlot(bool bTest)
-{
-  std::cerr << "Clicked" << std::endl;
 }

@@ -40,11 +40,10 @@ public:
   void setTitle(const char* newTitle);
 
 protected slots:
-  void testSlot(bool bTest);
 
 protected:
   QScopedPointer<qSlicerSingleAxisControlWidgetPrivate> d_ptr;
-  void init();
+  void InitSetup();
 
 private:
   Q_DECLARE_PRIVATE(qSlicerSingleAxisControlWidget);
